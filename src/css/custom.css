@@ -1,299 +1,177 @@
 :root {
- /*    --clr-neon: hsl(80 100% 61%);
-    --clr-bg: hsl(0 0% 17%); */
-    
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100%;
-    width: 100%;
-    background: transparent;
-    font-family: "Balsamiq Sans", cursive;
-    color: var(--clr-neon);
-    margin: 0;
-    padding: 0;
-} 
+  min-height: 100%;
+  width: 100%;
+  background: transparent;
+  font-family: "Balsamiq Sans", cursive;
+  color: var(--clr-neon);
+  margin: 0;
+  padding: 0;
+}
 
 .via-verde {
-    --tw-gradient-stops: var(--tw-gradient-from), #bdff38, var(--tw-gradient-to, rgba(16, 185, 129, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), #ffffff,
+    var(--tw-gradient-to, rgba(16, 185, 129, 0));
 }
 
 .text-verde {
-    color: hsl(80 100% 61%);
+  color: hsl(80 100% 61%);
 }
 
 .bg-verde {
-    background-color: hsl(80 100% 61%);
+  background-color: hsl(80 100% 61%);
 }
 
 .hover\:text-verde:hover {
-    color: hsl(80 100% 61%);
+  color: hsl(80 100% 61%);
 }
 
 .hover\:bg-verde:hover {
-    background-color: hsl(80 100% 61%);
+  background-color: hsl(80 100% 61%);
 }
 
 .text-cinza {
-    color: hsl(0 0% 17%);
+  color: hsl(0 0% 17%);
 }
 
 .bg-cinza {
-    background-color: hsl(0 0% 17%);
+  background-color: hsl(0 0% 17%);
 }
 
 .hover\:text-cinza:hover {
-    color: hsl(0 0% 17%);
+  color: hsl(0 0% 17%);
 }
 
 .hover\:bg-cinza:hover {
-    background-color: hsl(0 0% 17%);
+  background-color: hsl(0 0% 17%);
 }
 
-.neon-button {
-    font-size: 4rem;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--clr-neon);
-    border: var(--clr-neon) 0.125em solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-    
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--clr-neon);  
-    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
-    position: absolute;
-}  
-
-.neon-button::before {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    background: var(--clr-neon);
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
-}
-
-.neon-button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 2em 0.5em var(--clr-neon);
-    opacity: 0;
-    background-color: var(--clr-neon);
-    z-index: -1;
-    transition: opacity 100ms linear;
-}
-
-.neon-button:hover,
-.neon-button:focus {
-    color: var(--clr-neon);
-    text-shadow: none;
-}
-
-.neon-button:hover::before,
-.neon-button:focus::before {
-    opacity: 1;
-}
-.neon-button:hover::after,
-.neon-button:focus::after {
-    opacity: 1;
-}
-
-.neon-button2 {
-    font-size: 4rem;
-    top: 32rem;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--clr-bg);
-    padding: 0.25em 1em;
-    text-shadow: 0 5px 0.2em hsl(0 0% 17% / 0.3), 0 5px 0.2em var(--clr-neon);
-    position: absolute;
-}
-
-.neon-button2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    opacity: 0;
-    background-color: var(--clr-neon);
-    z-index: -1;
-    transition: opacity 100ms linear;
-}
-
-.neon-button3 {
-    font-size: 4rem;
-    top: 35rem;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--clr-bg);
-    padding: 0.25em 1em;
-    text-shadow:inset  1 5px 0.2em hsl(0 0% 17% / 0.3), 0 5px 0.2em var(--clr-bg);
-    position: absolute;
-    display: block; 
-    -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
-    opacity: 0.2;
-    background-image: linear-gradient(to top, var(--clr-neon), var(--clr-bg), var(--clr-bg) );
-    background-clip: text;
-    -webkit-background-clip: text;  
-    -webkit-text-fill-color: transparent;
-    color: black;
-}
-
-
-.animation, .animation_layer {
-    height: 1000px;
+.animation,
+.animation_layer {
+  height: 1000px;
 }
 
 .animation {
-    display: block;
-    position: relative;
-    z-index: 10;
+  display: block;
+  position: relative;
+  z-index: 10;
 }
 
 .animation_layer {
-    background-position: bottom center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    position: absolute;
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
 }
 
 .animation_layer.parallax {
-    position: fixed;
+  position: fixed;
 }
 
 #primo {
-    background-image: url(../components/images/primo.png);
-    z-index: 1;
+  background-image: url(../components/images/primo.png);
+  z-index: 1;
 }
 
 #back2 {
-    background-image: url(../components/images/back2.png);
-    z-index: 1;
-    translate: 0 20%;
+  background-image: url(../components/images/back2.png);
+  z-index: 1;
+  translate: 0 20%;
 }
 
 #plano1 {
-    background-image: url(../components/images/plano1.png);
-    z-index: 1;
+  background-image: url(../components/images/plano1.png);
+  z-index: 1;
 }
 
 #plano2 {
-    background-image: url(../components/images/plano2.png);
-    z-index: 1;
+  background-image: url(../components/images/plano2.png);
+  z-index: 1;
 }
 
 #plano3 {
-    background-image: url(../components/images/plano3.png);
-    z-index: 1;
+  background-image: url(../components/images/plano3.png);
+  z-index: 1;
 }
 
 #plano4 {
-    background-image: url(../components/images/plano4.png);
-    z-index: 1;
-    background-size: 100%;
-    translate: 0 41%;
+  background-image: url(../components/images/plano4.png);
+  z-index: 1;
+  background-size: 100%;
+  translate: 0 41%;
 }
 
 .contentando {
-    text-align: center;
-    align-items: center;
-    translate: 0% 670%;
-    
+  text-align: center;
+  align-items: center;
+  translate: 0% 670%;
 }
 
 .text-gradient {
-    background: #FFFFFF;
-    background: linear-gradient(to top, #FFFFFF 18%, #E0801F 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow:  0 2px 0.5em white;
+  background: #ffffff;
+  background: linear-gradient(to top, brown 18%, #e0801f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar {
-    background-color: hsl(0 0% 100% / 0.2 );
-    border-radius: 5px;
-    padding: 10px;
-    margin-left: 0;
+  background-color: hsl(0 0% 100% / 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 0;
 }
 
 .rotate-360 {
-    --tw-rotate: 360deg;
+  --tw-rotate: 360deg;
 }
 
-.burger_layer {
-    background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
-    width: 100%;
-    position: absolute;
+.cafe_layer {
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
 }
 
-.burger_layer.parallax {
-    position: fixed;
+.cafe_layer.parallax {
+  position: fixed;
 }
 
-.animation, .burger_layer {
-    height: 1000px;
+.animation,
+.cafe_layer {
+  height: 1800px;
 }
 
-#burg1 {
-    background-image: url(../components/images/burg1.png);
-    z-index: 8;
-    translate: 0 -20%;
+#copo1 {
+  background-image: url(../components/images/copo1.png);
+  z-index: 1;
+  translate: -0.5% -15%;
+  scale: 60%;
 }
-#burg2 {
-    background-image: url(../components/images/burg2.png);
-    z-index: 7;
-    translate: 0 -15%;
+#copo2 {
+  background-image: url(../components/images/copo2.png);
+  z-index: 1;
+  translate: 0 -16%;
+  scale: 60%;
 }
-#burg3 {
-    background-image: url(../components/images/burg3.png);
-    z-index: 6;
-    translate: 0 -10%;
+#copo3 {
+  background-image: url(../components/images/copo3.png);
+  z-index: 1;
+  translate: 0 -17%;
+  scale: 60%;
 }
-#burg4 {
-    background-image: url(../components/images/burg4.png);
-    z-index: 5;
-    translate: 0 -5%;
-}
-#burg5 {
-    background-image: url(../components/images/burg5.png);
-    z-index: 4;
-    translate: 0 0%;
-}
-#burg6 {
-    background-image: url(../components/images/burg6.png);
-    z-index: 3;
-    translate: 0 5%;
-}
-#burg7 {
-    background-image: url(../components/images/burg7.png);
-    z-index: 2;
-    translate: 0 10%;
-}
-#burg8 {
-    background-image: url(../components/images/burg8.png);
-    z-index: 1;
-    translate: 0 15%;
+#copo4 {
+  background-image: url(../components/images/copo4.png);
+  z-index: 1;
+  translate: 0 -18%;
+  scale: 60%;
 }
