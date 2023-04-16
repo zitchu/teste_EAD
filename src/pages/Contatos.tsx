@@ -11,7 +11,7 @@ export default function Contatos() {
             src="https://avatars.githubusercontent.com/u/64271716?v=4"
             className="rounded-full w-20 h-20 relative m-2 hover:scale-125"
           />
-          Jeanluiz Ferreira Porto Monteiro{" "}
+          Jeanluiz Ferreira Porto Monteiro
         </div>
         <div>Matrícula</div>
         <div>2186101570</div>
